@@ -16,7 +16,7 @@ class Item:
 
     def __str__(self):
         # Retorna string con información básica del item
-        return f"An object of type Item with id {self.id}."
+        return f"An object of type {self.__class__.__name__} with id {self.id}."
 
     def condition_description(self):
         # Diccionario con descripciones de condición
