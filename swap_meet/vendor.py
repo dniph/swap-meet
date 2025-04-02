@@ -27,8 +27,7 @@ class Vendor:
         return None
     
     def swap_items(self, other_vendor, my_item, their_item):
-        if my_item not in self.inventory or \
-            their_item not in other_vendor.inventory:
+        if my_item not in self.inventory or their_item not in other_vendor.inventory:
             return False
         
         # Remueve mi item de mi inventario
@@ -45,5 +44,4 @@ class Vendor:
     def swap_first_item(self, other_vendor):
         if not self.inventory or not other_vendor.inventory: # empty inventory
             return False
-        return self.swap_items(other_vendor, self.inventory[0], \
-                               other_vendor.inventory[0])
+        return self.swap_items(other_vendor, self.inventory[0], other_vendor.inventory[0])
