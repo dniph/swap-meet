@@ -1,6 +1,6 @@
 from swap_meet.item import Item
 
-class Decor(Item): # parent class is Item
+class Decor(Item):
     def __init__(self, id = None, condition=0, width=0, length=0):
         super().__init__(id)
         self.condition = condition
