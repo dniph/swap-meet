@@ -20,13 +20,13 @@ class Item:
 
     def condition_description(self):
         # Diccionario con descripciones de condición
-        descriptions = {
-            0: "Poor",
-            1: "Fair",
-            2: "Good",
-            3: "Very Good",
-            4: "Like New",
-            5: "Mint"
+        descriptions = { # Think these are supposed to be doubles..?
+            0.0: "Poor",
+            1.0: "Fair",
+            2.0: "Good",
+            3.0: "Very Good",
+            4.0: "Like New",
+            5.0: "Mint"
         }
         # Retorna la descripción correspondiente o mensaje default
         return descriptions.get(self.condition, "Unknown condition")
