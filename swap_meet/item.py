@@ -1,7 +1,7 @@
 import uuid  # Importamos el módulo para generar IDs únicos
 
 class Item:
-    def __init__(self, id=None, condition=0):
+    def __init__(self, id=None, condition=0, age=0):
         # Si no se provee un id, genera uno único usando uuid
         if id is None:
             self.id = uuid.uuid4().int
@@ -9,6 +9,7 @@ class Item:
             self.id = id
         # Inicializa la condición del item
         self.condition = condition
+        self.age = age
 
     def get_category(self):
         # Retorna el nombre de la clase como categoría

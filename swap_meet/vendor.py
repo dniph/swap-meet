@@ -64,3 +64,23 @@ class Vendor:
             return False
         
         return self.swap_items(other_vendor, vendor_best, other_vendor_best)
+    
+    # Get the newest item in inventory. Return None if inventory is empty.
+    def get_newest(self):
+        newest_age = 1000000
+        newest_item = None
+        for item in self.inventory:
+            if item.age < newest_age:
+                newest_age = item.age
+                newest_item = item
+        return newest_item
+
+    # Find the newest item in each vendor's inventory and swap.
+    # Return True if item is swapped, else return False.
+    def swap_by_newest(self, other_vendor):
+        # if not self.inventory or not other_vendor.inventory:
+        vendor_newest = self.get_newest
+        other_newest = other_vendor.get_newest
+        if not vendor_newest or not other_newest: # might not even need this? 
+            return False
+        return self.swap_items(other_vendor, vendor_newest, other_newest)
